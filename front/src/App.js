@@ -7,9 +7,8 @@ function App() {
     const a = async () => {
       await fetch("/api")
         .then((r) => r.json())
-        .then((b) => console.log(b.hi));
+        .then((b) => console.log(b.data));
     };
-    console.log(1);
     a();
   }, []);
   return (
