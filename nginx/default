@@ -1,0 +1,13 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+
+	location /api {
+		proxy_pass http://10.0.3.73:3000;    # backend 주소 
+	}
+
+
+	location / {
+		proxy_pass http://localhost:3000;   # Front 주소
+	}
